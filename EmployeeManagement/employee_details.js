@@ -21,6 +21,19 @@ function calculateTotalSalaries(){
 
 function displayHREmployees(){
     const HREmployee = employees.filter((e) => e.department === "HR");
-    const hrEmployeesDisplay = HREmployee.forEach((employee) => {
+    const hrEmployeesDisplay = HREmployee.map((employee) => 
         `<p> ${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('')
+
+    document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay
+};
+
+function findEmployeeById(id){
+    const findEmployee = employees.find((e) => e.id === id)
+    const displayFoundEmployee = document.getElementById('employeesDetails').innerHTML = `<p> ${findEmployee.id}: ${findEmployee.name}: ${findEmployee.name} - ${findEmployee.department} - $${findEmployee.salary}</p>`;
+    if (findEmployee)
+        displayFoundEmployee;
+    else{
+         document.getElementById('employeesDetails').innerHTML =  'No Employee with this ID has been found';
+    }
+
 };
