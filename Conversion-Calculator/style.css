@@ -1,0 +1,134 @@
+body { 
+    margin:10px;
+    background-color: black;
+}
+
+
+#home {
+    background-color: #483355; 
+    margin-top: -1cm;
+    margin-right: -1cm;
+    margin-left: -1cm;
+    padding-bottom: 2cm;
+    padding-bottom: 1cm;
+    padding-top: 2cm;
+}
+
+header {
+    font-size: 30px;
+    color: rgb(240, 234, 245);
+    float: left;
+    padding-left: 2cm;
+}
+
+.topdiv {
+    float: right;
+    padding-right: 1cm;
+}
+
+.topmenu{
+    color: lightgray;
+    background-color:  #483355;
+    margin: 10px;
+    border-radius: 1mm;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.topmenu:hover{
+    color: white;
+    font-weight: bolder;
+    background-color: purple;
+    text-decoration: underline;
+}
+
+/*Conversion Sections Styling */
+
+#all-conversion-sections{
+    display: grid;
+    justify-content: center;
+}
+
+figure{
+    float: left;
+    justify-self: auto;
+    width: 200px;
+}
+
+img{
+    width: 200px
+}
+
+figcaption{
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+button{
+    font-size: 20px;
+    border: transparent;
+    border-radius: 40px;
+    width: fit-content;
+    background-color: lightgreen;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+
+button:hover{
+    cursor: pointer;
+
+}
+
+/* Calculator Panel */
+
+.b{
+    border-top-style: solid;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.temperature{
+    border-top-color: green;
+}
+
+.weight{
+    border-top-color: coral;
+}
+
+.distance{
+    border-top-color: cyan;
+}
+
+legend{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.iconbutton{
+    width: 50px;
+    height: 50px;
+    border-top-width: 20px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
+    left: 0;
+}
+
+.iconbutton img{
+    width: 30px;
+}
+
+footer{
+    background-color: lightpink;
+    margin-top: 20px;
+}
