@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Sign In Form</title>
+    <script type = "application/javascript">
+
+//function to checkdata whenever form is submitted
+        function checkdata(){
+           var firstname = document.getElementById("fname");
+           var lastname = document.getElementById("lname");
+           var email = document.getElementById("email");
+           var  tphone = document.getElementById("phone")
+
+           if( firstname.value.trim() == ""){
+                alert("Please Enter your first name");
+                firstname.focus();
+                return false;
+            };
+
+            if(lastname.value.trim() == ""){
+                alert("Please Enter your last name");
+                lastname.focus();
+                return false;
+            };
+
+            if(email.value.trim() == ""){
+                alert("Please Enter your Email");
+                email.focus();
+                return false;
+            };
+
+            if(tphone.value.trim() == ""){
+                alert("Pkease Enter your Telephone Number");
+                tphone.focus();
+                return false;
+            }
+            //return true if all is well
+            return true;
+        };
+
+    </script>
+    
+</head>
+<body>
+    <h1>User Form</h1>
+    <h2>Please Enter Your Contact Information</h2>
+    <form id = "form1" onsubmit="return checkdata()">
+        <fieldset>
+            <legend>Sign In</legend>
+            <!--Label for UserName Input-->
+            <label for = "fname"> First Name: </label>
+            <input type = "text" id="fname" name = "fname"> <br>
+
+            <label for = "lname"> Last Name: </label>
+            <input type = "text" id="lname" name = "lname"> <br>
+
+            <label for = "email"> Email:</label>
+            <input type ="email" id="email" name="email"><br>
+
+            <label for = "phone"> Phone: </label>
+            <input type = "tel" id="phone" name="phone"><br>
+        </fieldset>
+        <br>
+            <input type ="submit" value = "Submit">
+            <input type = "reset" value = "Reset">
+
+    </form>
+</body>
+</html>
