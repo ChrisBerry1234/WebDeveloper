@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Conversion</title>
     <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
 </head>
 <body>
     <section id = "home">
@@ -12,11 +13,11 @@
         <nav>
           <div class="topdiv">
             <!--Button that redirects users to the temperature section-->
-            <a href = "temperature" class="topmenu"<button>Temperature</button></a>
+            <a href = "#temperature" class="topmenu"<button>Temperature</button></a>
             <!--Button that redirects users to the Weight section-->
-            <a href = "weight" class="topmenu"<button>Weight</button></a>
+            <a href = "#weight" class="topmenu"<button>Weight</button></a>
             <!--Button that redirects users to the Distance section-->
-            <a href = "distance" class="topmenu"<button>Distance</button></a>
+            <a href = "#distance" class="topmenu"<button>Distance</button></a>
           </div>
         </nav>
     </section>
@@ -37,16 +38,16 @@
                 <article>
                     <!--Temperature-->
                     <fieldset>
-                        <legend>Temperature<legend>
+                        <legend>Temperature</legend>
                             <!--Temperature Input-->
                             <label for = "celsius"> Celsius </label> <br/>
                             <input type = "number" id = "celsius"/> <br/>
 
                             <!--Conversion Button-->
-                            <button id = "temperature"> Convert </button> <br/>
+                            <button id = "temperature" onclick = "temperatureconversion()"> Convert </button> <br/>
 
                             <!--Temperature Output-->
-                            <input type = "number" id = "celsius"/> <br/>
+                            <input type = "number" id = "fahrenheit"/> <br/>
                             <label for = "fahrenheit" > Fahrenheit</label>
                     </fieldset>
                 </article>
@@ -68,19 +69,19 @@
                     </figure>
     
                     <article>
-                        <!--Temperature-->
+                        <!--Weight-->
                         <fieldset>
-                            <legend>Weight<legend>
-                                <!--Temperature Input-->
+                            <legend>Weight</legend>
+                                <!--Weight Input-->
                                 <label for = "kilo"> Kilograms </label> <br/>
                                 <input type = "number" id = "kilo"/> <br/>
     
                                 <!--Conversion Button-->
-                                <button id = "weight"> Convert </button> <br/>
+                                <button id = "weight" onclick = "weightconversion()"> Convert </button> <br/>
     
-                                <!--Temperature Output-->
+                                <!--Weight Output-->
                                 <input type = "number" id = "pounds"/> <br/>
-                                <label for = "fahrenheit" > Pounds </label> 
+                                <label for = "pounds" > Pounds </label> 
                         </fieldset>
                     </article>
     
@@ -92,21 +93,21 @@
             <div style="clear:both;"></div>
 
             <section id = "distance" class="b distance">
-                <!--Temperature Conversion Section-->
+                <!--Distance Conversion Section-->
                     <div id = "dst">
                         <figure>
                             <img src = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width = "200px"/>
                             <figcaption> Kilometer to Mile Conversion</figcaption>
                         </figure>
                         
-                        <artical>
+                        <article>
                             <fieldset>
-                                <legend> Distance <legend>
+                                <legend> Distance </legend>
 
                                     <label for = "km"> Kilometers</label> <br/>
                                     <input type = "number" id = "km"> <br/>
 
-                                    <button id = "distance"> Convert </button> <br/>
+                                    <button id = "distance" onclick="distanceconversion()"> Convert </button> <br/>
 
                                     <input type = "number" id = "miles"> <br/>
                                     <label for = "miles"> Miles </label>
@@ -127,6 +128,6 @@
         </a>
     </div>
 
-    <footer> Learn More about HTML Here
+    <footer> &copy Conversion Calculator. All rights reserved.
 </body>
 </html>
