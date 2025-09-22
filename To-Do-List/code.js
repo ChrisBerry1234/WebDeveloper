@@ -32,7 +32,7 @@ function addTask(){
         const DeleteButton = document.createElement("button");
         DeleteButton.textContent = "Remove";
         DeleteButton.addEventListener("click", () => RemoveTask(TaskList));
-        DeleteButton.classList.add("btn, btn-remove");
+        DeleteButton.classList.add("btn", "btn-remove");
 
         //Appending the task text and buttons to list item for display
         TaskList.appendChild(TaskListDisplay);
@@ -46,9 +46,21 @@ function addTask(){
     else{
         alert("Please Enter a Task")
     };
-
 };
 
+
+function editTask(TaskListDisplay){
+   const newTask = prompt("Please Enter Your Updated Task");
+   console.log(newTask);
+
+   if (newTask !== null && newTask.trim() !== "") {
+        TaskListDisplay.textContent = newTask;
+   }
+};
+
+function RemoveTask(TaskList){
+    TaskList.remove();
+};
 /*
 function renderDisplay(){
 
