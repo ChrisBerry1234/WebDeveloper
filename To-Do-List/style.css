@@ -1,0 +1,60 @@
+.todo-container{
+    width: 310px;
+    margin: 50px auto;
+    border: 3px solid #4CAF50;
+    border-radius: 12px;
+    padding: 20px;
+    background: #f9fff9;
+    box-shadow: 0cqb;
+
+}
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+#taskinput{
+    padding: 6px;
+    margin-right: 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+}
+#taskinput:focus {
+    box-shadow: 0 0 10px rgba(76,175,80,0.5);
+}
+
+.add-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 7px;
+}
+
+.add-btn:hover{
+    background: #45a049;
+}
+
+.to-do-list-display{
+    width: 320px;
+    border: 5px solid green;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: block;
+}
