@@ -8,6 +8,7 @@ nav {
     padding: 20px 40px;
     background: #1F2937;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border-bottom: solid gray;
 }
 
 ul {
@@ -197,3 +198,72 @@ ul a:hover{
     margin-left: 450px;
 }
 
+/*Sign-Up*/
+.sign-up-container{
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 12px;
+}
+
+.sign-up {
+    background-color: #3882F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    max-width: 100%;
+    padding: 70px 40px;
+    margin: 10px 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.sign-up p{
+    color: white;
+    margin-right: 600px;
+    font-size: 28px;
+    margin-bottom: 6px;
+    display: inline;
+}
+
+.sign-up footer{
+    color:white;
+    font-size: 16px;
+}
+
+.sign-up button{
+    display: block;
+    margin: -20px 36px;    
+    padding: 12px 24px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.25s ease-in ;
+}
+
+.sign-up button:hover{
+    background-color: white;
+    color: #3b82f6;
+    transform: scale(1.015);
+}
+
+
+/*Footer*/
+.footer{
+    background-color: #1F2937;
+    color: white;
+    padding: 30px 20px;
+    margin-top: 30px;
+    text-align: center;
+
+
+}
