@@ -43,16 +43,14 @@ ul a{
 
 ul a:hover{
     transform: scale(1.1);
-    border-radius: 1000%;
+    border-radius: 100%;
     text-shadow: 3px 3px 10px #2563EB;
     background: transparent;
     color:lightblue;
-
 }
 
 
 /*Second Div */
-
 .section-1{
     background-color: #1F2937;
     margin: 0;
@@ -133,15 +131,69 @@ ul a:hover{
     flex-wrap: wrap;
 }
 
+ header{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+    padding: 16px;
+    text-align: center;
+}
+
+.information-section figure{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 275px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .information-section img{ 
     border-radius: 12px;
     width: 250px;
-    max-width: 200px;
+    max-width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 1s;
+    transition: transform 1s ease-out;
 }
 
-.information-section img:hover{
-    transform: scale(1.255);
+.information-section figcaption{
+    background-color: #e5e7eb;
+    padding: 12px 10px;
+    margin: 6px;
 }
+.information-section img:hover{
+    transform: scale(1.135);
+}
+
+
+/* Referral Section */
+.Ratings{
+    background-color:  #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 300;
+    padding: 80px 80px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.Ratings p {
+    max-width: 900px;
+    font-size: 2.2rem;
+    color: #1F2937;
+    font-weight: 300;
+}
+
+.Ratings footer {
+    padding: 20px;
+    font-weight: bold;
+    font-style: normal;
+    margin-left: 450px;
+}
+
