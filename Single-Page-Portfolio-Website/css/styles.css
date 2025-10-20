@@ -1,0 +1,63 @@
+body{
+    margin: 0px;
+}
+
+/* Header */
+.navbar{
+    background-color: purple;
+    padding: 12px 24px;
+    color: white;
+}
+
+/* navigation bar */
+.navbar nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Name Contact Email */
+.navbar .User-Logo{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.navbar .User-Logo h1{
+    margin: 0;
+    font-size: 1.4rem;
+}
+.navbar .User-Logo .contacts p{
+    margin: 2px 0px;
+    line-height: 1;
+}
+.navbar nav ul{
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 12px 24px;
+}
+.navbar nav ul a{
+    text-decoration: none;
+    color: white;
+    transition: transform 0.25s ease 0.1s,
+                font-weight 0.35s ease;
+                /*color 0.2s ease 0s*/
+                /*text-shadow 0.3s ease-in 0.25s */
+}
+.navbar nav ul a:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+    background: transparent;
+    color: #ffe6ff;  
+}
+  
+
+
+
+
