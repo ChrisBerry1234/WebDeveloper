@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Weather App </title>
-   
 </head>
 <body>
     <div class="main-container">
         <div class="main-table">
             <header> 
                <h1> Weather Based on Month</h1> 
-                <p class="Weather-img"> </p> 
+               <h2 id="month-display"> </h2>
+               <img id="weather" src="" alt="" width = "150px">
             </header>
             <label for="month"> Select Month: </label>
             <input type="text" id="month" list="all-months"><br>
@@ -29,9 +29,7 @@
                 <option value="November"></option>
                 <option value="December"></option>
             </datalist>
-            <p id="information-weather-display">
-
-            </p>
+            <p id="information-weather-display"> </p>
         </div>
     </div>
      <script src="scripts.js"></script>
