@@ -1,0 +1,62 @@
+body{
+    box-sizing: border-box;
+    margin: 100px auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-container{
+    margin: 0 auto;
+    border: 6px solid black;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.main-header{
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #4a90e2;
+}
+
+#month-display {
+    font-size: 2rem;
+    font-weight: 525;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    list-style: none;
+    padding: 20px;
+}
+
+.days-display{
+    width: 600px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    
+}
+.day-text {
+    background-color: #4a2db6;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 6px;
+    
+}
+

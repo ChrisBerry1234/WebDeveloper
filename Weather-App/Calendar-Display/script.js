@@ -40,7 +40,9 @@ month_header.innerHTML = `${month} ${current_date.getFullYear()}`;
 for (let i = 1; i<=days; i++){
     const calendarDay = document.createElement("li");
     calendarDay.textContent = i;
+    calendarDay.classList.add("day-text");
     calendarDay_list.appendChild(calendarDay);
+
 }
 }
 
