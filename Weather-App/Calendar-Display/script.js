@@ -1,11 +1,14 @@
 //Get User Selected Month From Options
 let getMonth = document.getElementById("month");
-let month_header = document.getElementById("display-month");
+let month_header = document.getElementById("month-display");
 
 // Add Eevent Listener by changing and selecting option
 getMonth.addEventListener('change', () => {
     createCalendar(getMonth.value);
 })
+
+//Get Current Date from Date() constructor 
+const current_date = new Date();
 
 //Parent Element to hold list day elements
 let calendarDay_list = document.getElementById("days");
@@ -30,8 +33,9 @@ function createCalendar(month){
         days = 31;
 }
 
+getMonth.value = month;
 calendarDay_list.innerHTML = '';
-month_header.innerHTML = month;
+month_header.innerHTML = `${month} ${current_date.getFullYear()}`;
 
 for (let i = 1; i<=days; i++){
     const calendarDay = document.createElement("li");
@@ -40,4 +44,6 @@ for (let i = 1; i<=days; i++){
 }
 }
 
-createCalendar("January");
+window.addEventListener("load", () => {
+    createCalendar(current_date.toLocaleString('default', { month: 'long'}))
+});

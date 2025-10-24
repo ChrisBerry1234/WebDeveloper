@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar Display</title>
+    <title> Calendar Display </title>
 </head>
 <body>
     <div class="main-container">
-        <div class="header-container">
-            <header id ="display-month">
-            </header>
+        <div class="main-header">
+            <header id="month-display"></header>
             <label for="month"> Select Month: </label>
-            <select id="month">
+            <select id = "month">
                 <option value="January"> January </option>
                 <option value="February"> February </option>
                 <option value="March"> March </option>
@@ -19,19 +18,17 @@
                 <option value="May"> May </option>
                 <option value="June"> June </option>
                 <option value="July"> July </option>
-                <option value="August"> August</option>
+                <option value="August"> August </option>
                 <option value="September"> September </option>
                 <option value="October"> October </option>
                 <option value="November"> November </option>
                 <option value="December"> December </option>
             </select>
         </div>
-
-        <div class="Calendar-days-display">
+        <div class="days-display">
             <ul id="days">
             </ul>
         </div>
-          
     </div>
     <script src="script.js"></script>
 </body>
