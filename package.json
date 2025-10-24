@@ -1,0 +1,23 @@
+{
+  "name": "webdeveloper-1",
+  "version": "1.0.0",
+  "description": "Welcome to my Web Development learning repository!  \r This project serves as a structured collection of all my work and notes as I grow from a **Beginner** to an **Intermediate** Web Developer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisBerry1234/WebDeveloper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisBerry1234/WebDeveloper/issues"
+  },
+  "homepage": "https://github.com/ChrisBerry1234/WebDeveloper#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
