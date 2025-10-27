@@ -42,6 +42,9 @@ for (let i = 1; i<=days; i++){
     calendarDay.textContent = i;
     calendarDay.classList.add("day-text");
     calendarDay_list.appendChild(calendarDay);
+    calendarDay.addEventListener("dblclick", () =>{
+        alert(`You clicked day ${calendarDay.textContent}`);
+    })
 
 }
 }
