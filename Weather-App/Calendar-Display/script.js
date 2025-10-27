@@ -2,6 +2,15 @@
 let getMonth = document.getElementById("month");
 let month_header = document.getElementById("month-display");
 
+//Modals Selector
+const modal = document.getElementById("modal");
+const modal_close = document.getElementById("modal-close");
+
+//Adding Event Listener onSubmit button
+modal_close.addEventListener("click",()=>{
+    modal.close();
+})
+
 // Add Eevent Listener by changing and selecting option
 getMonth.addEventListener('change', () => {
     createCalendar(getMonth.value);
@@ -43,12 +52,12 @@ for (let i = 1; i<=days; i++){
     calendarDay.classList.add("day-text");
     calendarDay_list.appendChild(calendarDay);
     calendarDay.addEventListener("dblclick", () =>{
-        alert(`You clicked day ${calendarDay.textContent}`);
+       modal.showModal();
     })
-
 }
 }
 
+//Loading Current date data on computer load
 window.addEventListener("load", () => {
     createCalendar(current_date.toLocaleString('default', { month: 'long'}))
 });
