@@ -1,6 +1,7 @@
 //Get User Selected Month From Options
 let getMonth = document.getElementById("month");
 let month_header = document.getElementById("month-display");
+let taskDate = document.getElementById("dateInput");
 
 //Modals Selector
 const modal = document.getElementById("modal");
@@ -57,21 +58,32 @@ for (let i = 1; i<=days; i++){
 }}
 
 //ToDoList Functionality
-const toDoList = [];
+
+//Empty todo list object
+const toDoList = [{
+
+}];
 
 function addTask(){
     const inputElement =document.querySelector("#taskinput");
-    const Screemdisplay = document.querySelector(".to-do-list-display");
+    const screendisplay = document.querySelector(".to-do-list-display");
     const input = inputElement.value;
+    const date =  taskDate.value;
 
     if (input.trim() !== ""){
+        if(!date){
+            alert("Enter a date as well")
+        }
+        else{
         //append the input to the array
         toDoList.push({
             task: input,
+            dateAssigned: date
         });
         console.log(toDoList);
         /*renderDisplay();*/
         inputElement.value = "";
+        taskDate.value = " ";
 
         //this list will hold the display for all the task elements
         const TaskList = document.createElement("li");
@@ -81,6 +93,11 @@ function addTask(){
         const TaskListDisplay = document.createElement("span");
         TaskListDisplay.textContent = input;
         TaskListDisplay.classList.add("task-text");
+
+        const TaskListDate = document.createElement('span');
+        TaskListDate.textContent = date;
+        TaskListDisplay.classList.add("task-date");
+
         
         //adding buttons for editing and deletion
         const EditButton = document.createElement("button");
@@ -97,9 +114,11 @@ function addTask(){
         TaskList.appendChild(TaskListDisplay);
         TaskList.appendChild(EditButton);
         TaskList.appendChild(DeleteButton);
+        TaskList.appendChild(TaskListDate);
 
         //Append the taskList with all of its childs to the screen display
-        Screemdisplay.appendChild(TaskList);
+        screendisplay.appendChild(TaskList);
+    }
     }
 
     else{
