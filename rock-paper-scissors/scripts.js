@@ -1,5 +1,4 @@
 //Global variables
-let userWins = 0;
 let computerWins = 0;
 let rounds = 0;
 
@@ -120,11 +119,13 @@ function displayResults(computerChoice, userChoice, outcome) {
      if (outcome === 'win'){
         message = "You Win";
         score.wins++;
+        
         rounds++;
      }
      else if (outcome === 'lose'){
         message = 'You Lose';
         score.losses++;
+        computerWins++;
         rounds++;
      }
      else{
@@ -138,4 +139,14 @@ function displayResults(computerChoice, userChoice, outcome) {
 
     localStorage.setItem('score', JSON.stringify(score));
     getScore.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
+    //Branch statement for rounds
+    if (rounds >= 5){
+        if(computerWins > score.wins){
+            alert(`Computer Wins, Score: Computer: ${computerWins} User:${score.wins}`);
+        }
+        else{
+            alert(`User Wins, Score: Computer: ${computerWins} User:${score.wins}`);
+        }
+    }
 }
