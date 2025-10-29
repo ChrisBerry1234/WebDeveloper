@@ -1,23 +1,51 @@
+//Global variables
+let userWins = 0;
+let computerWins = 0;
+let rounds = 0;
+
 //UI Buttons
 let rock_button = document.getElementById('Rock');
 let scissors_button = document.getElementById('Scissors');
 let paper_button = document.getElementById('Paper');
 let results_display = document.getElementById('results');
-let getScore = document.getElementById('score')
+let getScore = document.getElementById('score');
+let startGame = document.getElementById('start-game');
+let reset = document.getElementById('reset');
 
 //Adding Event Listeners
 rock_button.addEventListener('click', () => playGame('rock'));
 scissors_button.addEventListener('click', () => playGame('scissors'));
 paper_button.addEventListener('click', () => playGame('paper'));
 
+startGame.addEventListener("click", () => {
+    alert("There are only five rounds");
+    rock_button.disabled = false;
+    paper_button.disabled = false;
+    scissors_button.disabled = false;
+})
+
+reset.addEventListener("click", () => {
+    localStorage.removeItem('score');// remove score from local storage
+    //reset score object in memory
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    getScore.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+    results_display.innerHTML = '';
+    rounds = 0;
+})
 
 const score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
     ties: 0
 };
-//If nothing is in getScore, set everything to zero
-localStorage.removeItem('score');
+
+//When game loads, disable buttons first
+rock_button.disabled = true;
+paper_button.disabled = true;
+scissors_button.disabled = true;
+
 
 function playGame(userChoice){
 
@@ -64,6 +92,7 @@ function playGame(userChoice){
 
    
 
+
 function getComputerChoice(){
     let randomNumber = Math.random();
 
@@ -82,6 +111,8 @@ function getComputerChoice(){
 }
 
 
+
+
 function displayResults(computerChoice, userChoice, outcome) {
      
      let message = '';
@@ -89,19 +120,22 @@ function displayResults(computerChoice, userChoice, outcome) {
      if (outcome === 'win'){
         message = "You Win";
         score.wins++;
+        rounds++;
      }
      else if (outcome === 'lose'){
         message = 'You Lose';
         score.losses++;
+        rounds++;
      }
      else{
         message = 'Tie Game';
         score.ties++;
+        rounds++;
      }
     
-    results_display.innerHTML = `Computer: ${computerChoice} You:${userChoice}, ${message}`;
+    results_display.innerHTML = `<p>Round${rounds}</p> Computer: <img src="images/${computerChoice}.jpeg" width = "150px" height = "150px"> You: <img src = "images/${userChoice}.jpeg" width ="150px" height = "150px"> <<br> 
+    ${message}`;
 
     localStorage.setItem('score', JSON.stringify(score));
     getScore.innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
-    
 }
