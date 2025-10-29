@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main-container">
@@ -11,24 +12,37 @@
         <Header>
             Rock Paper Scissors Game
         </Header>
-
-        <button id="reset"> Reset </button>
-        <button id="start-game"> Start Game </button>
+        <div id="buttons">
+            <button id="reset"> Reset </button>
+            <button id="start-game"> Start Game </button>
+        </div>
 
         <div class="game-container"> 
-            <button id="Rock"> 
+            <button class="button-game" id="Rock"> 
                 <img src="images/rock.jpeg" alt="Rock" width="150px" height = "150px">
             </button>
-            <button id="Paper"> 
+            <button class="button-game" id="Paper"> 
                 <img src="images/paper.jpeg" alt="Paper" width="150px" height="150px">    
             </button>
-            <button id="Scissors">
+            <button class="button-game" id="Scissors">
                 <img src="images/scissors.jpeg" alt="Scissors" width="150px" height = "150px">
             </button>
         </div>
-        <div class="results-container"> </div>
+        <div class="results-container"> 
             <p id="results"></p>
             <p id="score"></p>
+        </div>
+
+        <dialog id="first-modal-open">
+            <p> There are only 5 rounds </p>
+            <button id="close-first-modal"> Ok </button>
+        </dialog>
+
+        <dialog id="modal-results">
+            <p> Results: </p>
+            <p id="results-modal-display"> </p>
+            <button id="modal-results-exit"> Exit </button>
+        </dialog>
     </div>
     <script src="scripts.js"></script>
 </body>

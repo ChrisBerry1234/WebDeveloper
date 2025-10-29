@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+}
+/*Main Game Container*/
+.main-container{
+    background-color: lightblue;
+    padding: 12px;
+    margin: 150px auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+/*Game Container*/
+.game-container{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    align-items: center;
+}
+
+Header{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/*Start and Reset Buttons*/
+#buttons{
+    margin: 7px;
+    padding: 5px
+}
+
+#reset{
+
+}
+
+#start-game,
+#reset
+{
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+#start-game{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+#reset{
+    background-color: #f44336;
+}
+
+
+.button-game{
+    border-radius: 12px;
+    padding: 12px;
+    background-color: transparent;
+    cursor: pointer;
+}
