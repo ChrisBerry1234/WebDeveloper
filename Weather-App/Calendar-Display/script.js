@@ -20,42 +20,53 @@ getMonth.addEventListener('change', () => {
 //Get Current Date from Date() constructor 
 const current_date = new Date();
 
+
+//Data Structure to hold months
+const monthsData = {
+    "January" : { season: "Winter", color: "lightblue", days: 31},
+    "February": { season: "Winter", color: "lightblue", days: 28},
+    "March":    {season: "Spring", color: "pink", days: 31},
+    "April":    {season: "Spring", color: "pink", days: 30},
+    "May":      {season: "Spring", color: "pink", days: 31},
+    "June":     {season: "Summer", color: "red", days: 30},
+    "July":     {season: "Summer", color: "red", days: 31},
+    "August":   {season: "Summer", color: "red", days: 31},
+    "September":{season: "Fall", color: "orange", days: 30},
+    "October":  {season: "Fall", color: "orange", days: 31},
+    "November": {season: "Winter", color: "lightblue", days: 30},
+    "December": {season: "Winter", color: "lightblue", days: 31},
+}
+
 //Parent Element to hold list day elements
 let calendarDay_list = document.getElementById("days");
     
 function createCalendar(month){
 
-    let days = 31;
+    calendarDay_list.innerHTML = ''
+    month_header.innerHTML = `${month} ${current_date.getFullYear()}`;
 
-   switch(month) {
-    case "September":
-    case "April":
-    case "June":
-    case "November":
-        days = 30;
-        break;
-
-    case "February":
-        days = 28;
-        break;
-
-   default: 
-        days = 31;
+    for (let i = 1; i<=monthsData[month].days; i++){
+        const calendarDay = document.createElement("li");
+        calendarDay.textContent = i;
+        calendarDay.classList.add("day-text");
+        calendarDay_list.appendChild(calendarDay);
+        calendarDay.addEventListener("dblclick", () =>{
+        modal.showModal();
+    })
+    
+}
+renderCalendarInformation(month);
 }
 
-getMonth.value = month;
-calendarDay_list.innerHTML = '';
-month_header.innerHTML = `${month} ${current_date.getFullYear()}`;
 
-for (let i = 1; i<=days; i++){
-    const calendarDay = document.createElement("li");
-    calendarDay.textContent = i;
-    calendarDay.classList.add("day-text");
-    calendarDay_list.appendChild(calendarDay);
-    calendarDay.addEventListener("dblclick", () =>{
-       modal.showModal();
+
+function renderCalendarInformation(month){
+    //select all days elements 
+    const allDays = document.querySelectorAll(".day-text");
+    allDays.forEach((day) => {
+        day.style.backgroundColor = monthsData[month].color;
     })
-}}
+}
 
 //ToDoList Functionality
 
@@ -78,7 +89,8 @@ function addTask(){
         //append the input to the array
         toDoList.push({
             task: input,
-            dateAssigned: date
+            dateAssigned: date,
+            completed: false
         });
         console.log(toDoList);
         /*renderDisplay();*/
@@ -112,9 +124,9 @@ function addTask(){
 
         //Appending the task text and buttons to list item for display
         TaskList.appendChild(TaskListDisplay);
+        TaskList.appendChild(TaskListDate);
         TaskList.appendChild(EditButton);
         TaskList.appendChild(DeleteButton);
-        TaskList.appendChild(TaskListDate);
 
         //Append the taskList with all of its childs to the screen display
         screendisplay.appendChild(TaskList);
