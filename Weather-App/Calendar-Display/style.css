@@ -38,6 +38,7 @@ body{
 .select-option{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 #month{
@@ -74,4 +75,126 @@ body{
     cursor: pointer;
     color: white;
     border-radius: 6px;
+}
+
+
+/* ToDo List Modal */
+.todo-container{
+    width: 400px;
+    border: 3px solid #4CAF50;
+    border-radius: 16px;
+    padding: 20px;
+    background: #f9fff9;
+    box-shadow: 0px 0px 10px;
+}
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+#taskinput{
+    padding: 6px;
+    margin-right: 4px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+}
+#taskinput:focus {
+    box-shadow: 0 0 10px rgba(76,175,80,0.5);
+}
+
+.add-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 7px;
+}
+
+.add-btn:hover{
+    background: #45a049;
+    font-weight: bolder;
+}
+
+.to-do-list-display{
+    width: 320px;
+    border: 5px solid green;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:normal;
+    gap: 4px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.todo-item{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    background: #f9fff9;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.exit-btn{
+    background-color: red;
+    color: white;
+    margin-left: 8px;
+    padding: 8px;
+    border-radius: 7px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+}
+
+.exit-btn:hover{
+    background-color: rgb(red, green, blue);
+    font-weight: bolder;
+}
+
+
+/* Task List Elements */
+
+.btn-edit{
+    padding: 6px;
+    margin-left: 4px;
+    background-color: yellow;
+    border-radius: 4px;
+    border: none;
+    width: 50px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-remove{
+    padding: 4px;
+    margin-left: 4px;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+    color: white;
+
 }
